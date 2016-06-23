@@ -18,8 +18,12 @@
     },
 
     render: function(){
-      $noteStringField.html(tmpl(noteTemplateHtml, {notes: app.collection.toJSON()[0].content } ));
-      console.log(app.collection.toJSON()[0].content);
+      if(app.collection.toJSON()[0] === undefined){
+        $noteStringField.html(tmpl(noteTemplateHtml, {notes: "" } ));
+      }
+      else{
+        $noteStringField.html(tmpl(noteTemplateHtml, {notes: app.collection.toJSON()[0] } ));
+      }
     },
   };
 

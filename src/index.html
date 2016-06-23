@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>My Note</title>
-  <link rel="stylesheet" href="css/app.css">
+  <!-- 로컬용 태그 <link rel="stylesheet" href="css/app.css"> -->
+  <!-- 배포용 태그 --><link rel="stylesheet" href="app.css">
 </head>
 <body>
 <div class="header">
@@ -20,7 +21,7 @@
 <textarea id="memo" placeholder="내용을 입력하세요"></textarea>
 </div>
 
-<script type="text/template" id="noteTemplate"><%=notes%></script>
+<script type="text/template" id="noteTemplate"><%=notes.content%></script>
 
 <div class="appinform hidden">
   <h2>Note 웹 어플리케이션 만들기</h2>
@@ -29,14 +30,18 @@
   버전 : v1.0
 </div>
 
+<!-- 배포용 태그 -->
+<script src="lib/jquery-1.11.2.js"></script>
+<script src="app.js"></script>
+<!-- 로컬개발용 태그 -->
+<!--
 <script src="js/lib/jquery-1.11.2.js"></script>
-
 <script src="js/config.js"></script>
 <script src="js/util.js"></script>
 <script src="js/NoteModel.js"></script>
 <script src="js/NoteCollection.js"></script>
 <script src="js/NoteView.js"></script>
 <script src="js/tmpl.js"></script>
-<script src="js/main.js"></script>
+<script src="js/main.js"></script> -->
 </body>
 </html>
